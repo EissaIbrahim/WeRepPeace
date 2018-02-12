@@ -1,0 +1,225 @@
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+.container{
+    position: relative;
+    display:block;
+    height: 700px;
+    padding: 20px;
+    
+}
+/* -----promotion bar----- */
+
+.promotion-bar{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:#000000;
+    text-align: center;
+    align-items:center;
+    width:100%;
+}
+
+.promotion-bar p{
+        font-size:20px;
+        color: #ffffff;
+        background-color:#000000;
+        text-align: center;
+        align-items:center;
+        word-spacing: 3px;
+        margin:0;
+}
+
+/* --------site-navbar------------ */
+
+.site-navbar{
+    position:relative;
+    height:200px;
+    
+}
+
+#navbar {
+    position:block;
+    float:right;
+    padding:10px;
+}
+#navbar > .current{
+    color:#000;
+}
+
+#navbar > a {
+     text-decoration: none;
+     font-size: 20px;
+     padding:12px;
+     color:#777;
+}
+
+
+#navbar > a:hover {
+    color:#000;
+}
+
+.logo {
+
+     position: absolute;
+     top:70px;
+     left:100px; 
+}
+
+.site-logo {
+    font-size:60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#000;
+}
+
+#nav-check{
+    display:none;
+    
+}
+ /*-----------site footer------------- */
+#site-footer{
+    position:relative;
+    font-size:20px;
+    bottom:0;
+    left:0;
+    right:0;
+    align-content: center;
+}
+.listing {
+    display:grid;
+    margin:1em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap:20px;
+}
+        
+li{
+    list-style-type: none;
+    color:#000000;
+        }
+a{
+    color:#000000;
+}
+        
+a:link, a:visited {
+    text-decoration: none;
+}
+.company-home{
+    margin-left: 50px;
+    width:200px;
+}
+.copy-rights{
+        
+    text-align:center;
+    margin:auto;
+        
+}
+              
+.input-group{
+    position: relative;
+    display:table;
+    border-collapse: separate;
+        padding: 0px;
+}
+        
+.signup-btn{
+    height:22px;
+    margin-left:10px;
+    background: black;
+    color:white;
+}
+
+@media only screen and (max-width:600px){
+    /* move the container down to be able to see the navbar below promotional code*/
+    .container{
+        position:relative;
+        top:40px;
+
+        
+    }
+    .promotion-bar p{
+       font-size: 15px;
+
+    }
+
+
+     /*--------- navbar----------*/
+        .nav-btn > label{
+            position: absolute;
+            height:50px;
+            width:50px;
+            padding:2px;
+            top:10px;
+            right:0;
+    }
+    
+     .nav-btn > label > span{
+        display:block;
+        float:right;
+        width:30px;
+        height:10px;
+        border-top: 2px solid #777;
+        
+    }
+  
+      #navbar {
+        
+        display: block;
+        position: absolute;
+        left:0;
+        transition: all 0.3s ease-in;
+        top:50px;
+        height: 0px;
+        overflow-y:hidden;
+       
+
+    }
+    
+    #navbar > a {
+        display: block;
+        width:100%;
+    }
+    
+   .logo{
+       
+        position:absolute;
+        display:block;
+        float:left;
+        top:15px;
+        left:12px;
+        
+       
+    }
+    
+    .site-logo{
+        display: block;
+        font-size: 20px;
+        left:0px;
+        padding-left:0px;
+        letter-spacing:5px ;
+    
+        
+    }
+    
+    #nav-check:not(:checked) + #navbar {
+        height: 0px;
+    }
+    
+    #nav-check:checked + #navbar {
+         height:calc(70vh - 50px);
+         overflow-y: auto;
+    } 
+    
+}
+
